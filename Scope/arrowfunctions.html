@@ -57,10 +57,13 @@ var studentRecords = [
         )
 
     function getStudentById(studentId){
-        return studentRecords.find(function matchId(record){
-            return (record.id == studentId)
-        })
+        return studentRecords.find(matchId)
     }
+
+    //hoisting exercise
+    function matchId(record){
+            return (record.id == studentId)
+        }
 
     function printRecords(){
         recordIds.map(function getRecord(studentId){
@@ -82,14 +85,16 @@ var studentRecords = [
     }
 
     function paidStudentsToEnroll(){
-        var isToEnroll = studentRecords.filter(function needsToEnroll (record){
-            return (record.paid && !currentEntollment.includes(record.id))
-        })
+        var isToEnroll = studentRecords.filter(needsToEnroll)
         .map(function getStudentId(record){
             return record.id;
         });
         return [...currentEntollment, ...idstoEnroll]
     }
+    //hoistings exercise
+    function needsToEnroll (record){
+            return (record.paid && !currentEntollment.includes(record.id))
+        }
 
     function remindUnPaid(recordIds){
         var unpaidIds = recordIds.filter(function isUnpaid(studentId){
