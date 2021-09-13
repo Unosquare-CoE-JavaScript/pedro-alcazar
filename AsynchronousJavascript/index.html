@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <div id="item1">
+            Button
+        </div>
+    </div>
+    
+</body>
+<style>
+    #item1{
+        border-radius: 5px; 
+        background-color: red; 
+        color: white; 
+        width: 200px; 
+        height: 20px; 
+        text-align: center; 
+        vertical-align:baseline; 
+        cursor: pointer;
+    }
+</style>
+<script type="text/javascript">
+    "use strict"
+    
+    //sync / Async
+    const test = function () {
+        console.log("Start of code 1")
+        setTimeout(() => {
+            console.log("Launching notice")
+            alert("Notice me!")
+            console.log("End of code 1")
+        }, 3000);
+    }
+
+    const test2 = function () {
+        console.log("Start code 2")
+        console.log("Now I get attention")
+    }
+    
+    
+    //Callbacks
+    let logCall = () => {
+        console.log("locCall was call back.")
+    }
+
+    setTimeout(logCall, 3000 );
+
+    let btn = document.querySelector("#item1")
+    btn.addEventListener("click", function(params) {
+        console.log("The button was clicked")
+    })
+
+
+    let students = [
+        {name: "James", score: 100, school: "East"},
+        {name: "Steve", score: 90, school: "West"},
+        {name: "Gabe", score: 50, school: "East"}
+    ]
+
+    let proccessStudents = (data, callbacks) =>{
+        data.forEach((element) =>{
+            if (element.school.toLocaleLowerCase() == "east"){
+                callbacks(element.score)
+            }
+        })
+    }
+
+    var total = 0;
+    let determineTotal = () =>{
+        let totalScore = (score) =>{
+            total = total + score
+            console.log("Total Score:" + total);
+        }
+        proccessStudents(students, totalScore)
+    }
+
+    determineTotal();
+
+    //Async Await
+
+    const plainFunction = () => {
+        console.log("start")
+        return "done"
+    }
+
+    // plainFunction().then(val => console.log(val))
+
+    const asyncFunc = async() => {
+        let p1 = await plainFunction()
+        console.log(p1)
+        console.log(`${p1} -- More`)
+    }
+    asyncFunc();
+</script>
+</html>
