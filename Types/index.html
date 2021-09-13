@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Running Test</h2>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var v;
+    console.log(typeof v)
+    v = "v";
+    console.log(typeof v)
+    v = function () {}
+    console.log(typeof v)
+    v = [1,2,3]
+    console.log(typeof v)
+    v = 42n;
+    console.log(typeof v)
+
+    var myAge = Number("0o46");
+    console.log(myAge)
+    var myNextAge = Number("39")
+    console.log(myNextAge)
+    var myCatsAge = Number("n/a")
+    console.log(myCatsAge)
+    myAge = "My son's age";
+    console.log(myAge)
+    console.log(Number.isNaN(myCatsAge))
+    console.log(Number.isNaN(myAge))    
+
+
+    //Negative Zero
+    var trendRate =  -0;
+    console.log(trendRate === -0)
+    console.log(trendRate.toString())
+    console.log(trendRate === 0)
+    console.log(trendRate > 0)
+    console.log(trendRate < 0)
+
+    console.log(Object.is(trendRate,-0))
+    console.log(Object.is(trendRate,0))
+</script>
+</html>

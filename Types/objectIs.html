@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>This is a Exercise for ObjectIs</h4>
+    <p id="returntext"></p>
+</body>
+<script type="text/javascript">
+    if (!Object.is || true){
+        Object.is = function(x, y){
+            console.log("entrando a la funcion")
+            var xNegZero = isItNegativeZero(x);
+            var yNegZero = isItNegativeZero(y);
+
+            if (xNegZero || yNegZero){
+                return xNegZero && yNegZero;
+            }else if (isItNaN(x) && isItNaN(y)){ 
+                return true;
+            }else {
+                return x === y;
+            }  
+
+            return false;
+
+            function isItNegativeZero(v){
+                // this return a operation and validate if is negative infinity, if is negative infity is -0
+                // and return true
+                // in case of 0, -0, will return false, because are not equals
+                // in case of -0, -0, will return true, because will validate that both are  negative  inifinity
+                return v == 0 && (1/v) == -Infinity;
+            }
+            
+            function isItNaN(x){
+                return x !== x
+            }
+        }
+    }
+
+
+    var toReturn =[
+        {sentence: "Object.is(43,23)", value: Object.is(43,23) === false},
+        {sentence: "Object.is(43,23)", value: Object.is(42,42) === true},
+        {sentence: "Object.is('foo', 'foo')", value : Object.is("foo", "foo") === true},
+        {sentence: "Object.is(false, false)", value : Object.is(false, false) === true},
+        {sentence: "Object.is(-0,0)", value : Object.is(-0,0) === false},
+        {sentence: "Object.is(-0,-0)", value: Object.is(-0,-0) === true},
+        {sentence: "Object.is(1,NaN)", value: Object.is(1,NaN) === false},
+        {sentence: "Object.is('Hola',NaN)", value: Object.is('Hola',NaN) === false},
+        {sentence: "Object.is(NaN,NaN)", value: Object.is(NaN,NaN) === true},
+        
+    ];
+
+
+    toReturn.forEach(element => {
+        print(element)
+    });
+
+
+    
+    
+    function print (value){
+        console.log(value)
+        document.getElementById("returntext").innerHTML= document.getElementById("returntext").innerHTML + "<br>" + value.sentence + " => " + value.value;
+    }
+
+
+    // this is wrong, dont should be
+    var test =  new Boolean();
+    console.warn(test)
+
+    // Use "New" for variables with behavior
+    var date = new Date();
+    console.log(date)
+
+</script>
+</html>
