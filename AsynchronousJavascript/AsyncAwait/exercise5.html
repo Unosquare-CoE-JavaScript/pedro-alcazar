@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const retrivePost = async(userID) =>{
+        let url = 'https://jsonplaceholder.typicode.com/posts/'
+            posts = [];
+        
+        posts = await fetch(url).then(data => data.json());
+        
+        return posts.filter(obj => obj.userId == userID)
+
+    }
+    let user1post =  retrivePost(1);
+    user1post.then(data => console.log(data))
+</script>
+</html>
