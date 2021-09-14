@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const masiveProcess = function(num) {
+        return new Promise (function(resolve, reject) {
+            if (isNaN (num)){
+                reject("Please enter a number")
+            }else{
+                let result = 0;
+                setTimeout(() => {
+                    for (let i = num ** 7 ; i>= 0 ; i --){
+                        result += Math.atan(i) * Math.tan(i)
+                    }
+                    resolve(result)
+                }, 0);
+            }
+        })
+    }
+
+    masiveProcess(10).then((amt) =>{
+        console.log("The number is :" + amt)
+    })
+    .catch(error => {
+        console.warn("Error to get number: " + error)
+    })
+</script>
+</html>
