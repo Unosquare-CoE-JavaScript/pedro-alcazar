@@ -13,11 +13,12 @@ function App() {
   }
   const handleChangeCheckStatus = (e) => {
     setButtonDisabled(e)
+    
   }
   return (
     <div className="App">
       <button 
-        style={{backgroundColor: stateButtonColor.color}} 
+        style={{backgroundColor: buttonDisabled ? 'gray':  stateButtonColor.color}} 
         onClick={handleChangeColor} 
         disabled={buttonDisabled}
         >Change to {newColor}</button> <br/>
