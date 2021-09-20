@@ -15,8 +15,8 @@ test('button turns blue when clicked',() =>{
   const likeElement = screen.getByRole('button', {name: 'Change to blue'})
   expect(likeElement).toHaveStyle({backgroundColor: 'red'})
   fireEvent.click(likeElement);
-  expect(likeElement).toHaveStyle({backgroundColor: 'blue'})
-  expect(likeElement.textContent).toBe('Change to red')
+  expect(likeElement).toHaveStyle({backgroundColor: 'blue'});
+  expect(likeElement).toHaveTextContent('Change to red');
 });
 
 test('initial conditions', () =>{
@@ -39,10 +39,10 @@ test('Checkbox disables button on first click and enables on second click',() =>
   const button = screen.getByRole('button');
 
   fireEvent.click(checkbox);
-  expect(button).toBeDisabled;
+  expect(button).toBeDisabled();
 
   fireEvent.click(checkbox);
-  expect(button).toBeEnabled;
+  expect(button).toBeEnabled();
 });
 
 describe('spaces before camel-case capital letters',()=>{
