@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitForElementToBeRemoved } from '@testing-library/react';
 import SummaryForm from '../SummaryForm';
 import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
@@ -43,9 +43,7 @@ test('popover responds to hover', async() => {
         userEvent.unhover(termsAndConditions);
     });
     
-    // await waitForElementToBeRemoved(() => {
-    //      screen.queryByText(/no ice cream will actually be delivered/i);
-    // });
+    await waitForElementToBeRemoved(() => screen.getByText(/no ice cream will actually be delivered/i));
 
     //popover disaper mouseover
 })
