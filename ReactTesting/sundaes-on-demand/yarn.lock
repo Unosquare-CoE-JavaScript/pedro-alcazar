@@ -1658,7 +1658,7 @@
     "@svgr/plugin-svgo" "^5.5.0"
     "loader-utils" "^2.0.0"
 
-"@testing-library/dom@^7.28.1", "@testing-library/dom@>=7.21.4":
+"@testing-library/dom@^7.28.1":
   "integrity" "sha512-3UqjCpey6HiTZT92vODYLPxTBWlM8ZOOjr3LX5F37/VRipW2M1kX6I/Cm4VXzteZqfGfagg8yXywpcOgQBlNsQ=="
   "resolved" "https://registry.npmjs.org/@testing-library/dom/-/dom-7.31.2.tgz"
   "version" "7.31.2"
@@ -1671,6 +1671,20 @@
     "dom-accessibility-api" "^0.5.6"
     "lz-string" "^1.4.4"
     "pretty-format" "^26.6.2"
+
+"@testing-library/dom@^8.5.0", "@testing-library/dom@>=7.21.4":
+  "integrity" "sha512-O0fmHFaPlqaYCpa/cBL0cvroMridb9vZsMLacgIqrlxj+fd+bGF8UfAgwsLCHRF84KLBafWlm9CuOvxeNTlodw=="
+  "resolved" "https://registry.npmjs.org/@testing-library/dom/-/dom-8.5.0.tgz"
+  "version" "8.5.0"
+  dependencies:
+    "@babel/code-frame" "^7.10.4"
+    "@babel/runtime" "^7.12.5"
+    "@types/aria-query" "^4.2.0"
+    "aria-query" "^4.2.2"
+    "chalk" "^4.1.0"
+    "dom-accessibility-api" "^0.5.6"
+    "lz-string" "^1.4.4"
+    "pretty-format" "^27.0.2"
 
 "@testing-library/jest-dom@^5.11.4":
   "integrity" "sha512-dfB7HVIgTNCxH22M1+KU6viG5of2ldoA5ly8Ar8xkezKHKXjRvznCdbMbqjYGgO2xjRbwnR+rR8MLUIqF3kKbQ=="
@@ -1695,7 +1709,7 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
-"@testing-library/user-event@^12.1.10":
+"@testing-library/user-event@^12.8.3":
   "integrity" "sha512-IR0iWbFkgd56Bu5ZI/ej8yQwrkCv8Qydx6RzwbKz9faXazR/+5tvYKsZQgyXJiwgpcva127YO6JcWy7YlCfofQ=="
   "resolved" "https://registry.npmjs.org/@testing-library/user-event/-/user-event-12.8.3.tgz"
   "version" "12.8.3"
@@ -3300,18 +3314,10 @@
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
-"chalk@^4.0.0":
+"chalk@^4.0.0", "chalk@^4.1.0":
   "integrity" "sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.0.tgz"
   "version" "4.1.0"
-  dependencies:
-    "ansi-styles" "^4.1.0"
-    "supports-color" "^7.1.0"
-
-"chalk@^4.1.0":
-  "integrity" "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
-  "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
-  "version" "4.1.2"
   dependencies:
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
@@ -9113,6 +9119,16 @@
     "react-is" "^17.0.1"
 
 "pretty-format@^27.0.0", "pretty-format@^27.2.0":
+  "integrity" "sha512-KyJdmgBkMscLqo8A7K77omgLx5PWPiXJswtTtFV7XgVZv2+qPk6UivpXXO+5k6ZEbWIbLoKdx1pZ6ldINzbwTA=="
+  "resolved" "https://registry.npmjs.org/pretty-format/-/pretty-format-27.2.0.tgz"
+  "version" "27.2.0"
+  dependencies:
+    "@jest/types" "^27.1.1"
+    "ansi-regex" "^5.0.0"
+    "ansi-styles" "^5.0.0"
+    "react-is" "^17.0.1"
+
+"pretty-format@^27.0.2":
   "integrity" "sha512-KyJdmgBkMscLqo8A7K77omgLx5PWPiXJswtTtFV7XgVZv2+qPk6UivpXXO+5k6ZEbWIbLoKdx1pZ6ldINzbwTA=="
   "resolved" "https://registry.npmjs.org/pretty-format/-/pretty-format-27.2.0.tgz"
   "version" "27.2.0"
