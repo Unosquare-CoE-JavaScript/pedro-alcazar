@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    "use strict"
+    let api = "https://swapi.co/api/";
+    let endpoint = "people/1";
+
+    let asyncFunction = async() => {
+        return "done";
+    }
+
+    let promise = asyncFunction();
+    console.log(promise)
+
+    let promise2 = promise.then((message) => {
+        console.log("Message 1 is: " + message)
+        return message
+    })
+    
+    promise2.then(message2 => console.log("Message 2 is: " + message2))
+
+
+    asyncFunction().then(message => console.log("This is the message from asyncfunction direct:" + message))
+
+    const swapi = num =>{
+        let options = {
+            method: "GET",
+            headers: new Headers(
+                {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "https://swapi.co",
+                    "Origin": "http://localhost:5500",
+                }
+            )
+        }
+        fetch(api+endpoint, options ).then(data => console.data)
+        axios.get(api+endpoint,options)
+        .then(data => console.log(data))
+        .catch(error => console.warn(error))
+    }
+    swapi();
+    
+
+
+</script>
+</html>
