@@ -1,7 +1,6 @@
 import { render, screen } from '../../../test-utils/testing-library-utils';
 import userEvent  from '@testing-library/user-event';
 import Options from '../Options';
-import OrderEntry from '../OrderEntry';
 
 test('update scoop subtotal when scoops change', async() => {
     render (<Options optionType="scoops" />);
@@ -51,7 +50,8 @@ test('update toppings subtotal when topping change',async() => {
 
 });
 
-// this code is commented because it can't check the status after changes of the others testsw
+// this code is commented because it can't check the status after changes of the others tests
+// the solutions is put this test on syncro mode with other tests
 // describe('grand total', () =>{
 //     test('grand total starts in 0.00', async() =>{
 //         render(<OrderEntry />);
