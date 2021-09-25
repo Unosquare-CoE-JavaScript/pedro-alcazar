@@ -17,5 +17,12 @@ export const handlers = [
                 { name: 'Hot fudge', imagePath: '/images/hot-fugde.png'}
             ])
         )
+    }),
+    rest.get('/order', (req, res, ctx) =>{
+        const orderNumber = Math.floor(Math.random()* 1000000000)
+
+        return res(
+            ctx.json({orderNumber: orderNumber})
+        )
     })
 ]
