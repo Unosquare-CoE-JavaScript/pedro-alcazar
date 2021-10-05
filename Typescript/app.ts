@@ -1,51 +1,25 @@
-class Department {
-    public name: string;
-    public employees: string[] = [];
-    public reports : string [] = [];
 
+interface Greetable {
+    name: string
+    greet (pharse: string): void
+}
+
+class Person implements Greetable{
+    name: string;
+    age: number = 30;
+    greet(pharse: string): void{
+        console.log('Pharse is :' + pharse + ' of: ' + this.name + 'with: ' + this.age + ' years')
+    };
     constructor(n: string){
-        this.name = n;
-    }
-
-    describe (){
-        console.log("Description of : " + this.name)
-        if (this.employees){
-            console.log("Employees: "+ this.employees)
-        }
-    }
-
-     addReport (report: string){
-        this.reports.push(report)
-    }
-
-    getReports () : string[]{
-        if (this.reports.length > 0){
-            return this.reports
-        }else{
-            throw Error ("Reports not Found...");
-            
-        }
+        this.name = n
     }
 }
 
-class ITDepartment extends Department{
-    admins : string[];
-    constructor(id: string , admins: string[]){
-        super(id);
-        this.admins = admins;
-    }
-}
+let user1 : Greetable = new Person('Max');
 
-let newDepartment = new Department('Accounting');
+console.log(user1)
+user1.greet("Call Geet")
 
-console.log(newDepartment);
-newDepartment.employees.push('Anna');
-newDepartment.employees.push('Max');
-newDepartment.describe();
 
-newDepartment.addReport ("New Report from method");
-let reports = newDepartment.getReports();
 
-let newITDepartment = new ITDepartment('IT',["admin1","admin2"])
-console.log(newITDepartment);
-newITDepartment.describe();
+
