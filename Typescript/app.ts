@@ -34,8 +34,6 @@ class ITDepartment extends Department{
         super(id);
         this.admins = admins;
     }
-
-
 }
 
 let newDepartment = new Department('Accounting');
