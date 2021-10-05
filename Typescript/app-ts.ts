@@ -10,4 +10,38 @@ const number1 = 5;
 const number2 = 10;
 const printResults = true;
 const resultPhrase =  "The result is: "
+
 add(number1, number2, printResults, resultPhrase)
+
+enum Role  {
+    ADMIN, READ_ONLY, AUTHOR
+}
+
+type Person = {
+    name: string,
+    age: number,
+    hobbies: string[],
+    role: Role
+}
+
+
+const person : Person= {
+    name: 'Maximilian',
+    age: 30,
+    hobbies : ['sports', 'music'],
+    role: Role.AUTHOR
+}
+
+function printHobbies (hobbies: string[]){
+    let strHobies = "Hobbies:"
+    hobbies.forEach(element => {
+        strHobies += ' ' + element
+    })
+    console.log(strHobies);
+}
+
+function printPerson (person1: Person){
+    console.log("Person name: " + person1.name + ' With ' + person1.age + ' years, is a ' + person1.role)
+    printHobbies(person1.hobbies)
+}
+printPerson(person)
