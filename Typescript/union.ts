@@ -25,7 +25,7 @@ type Person = {
 }
 
 
-const person : Person= {
+export const person : Person= {
     name: 'Maximilian',
     age: 30,
     hobbies : ['sports', 'music'],

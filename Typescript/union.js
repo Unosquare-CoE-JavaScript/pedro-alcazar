@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+exports.person = void 0;
 function add(n1, n2, showresult, Pharse) {
     if (Pharse === void 0) { Pharse = "Result:"; }
     var result = n1 + n2;
@@ -17,7 +20,7 @@ var Role;
     Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
     Role[Role["AUTHOR"] = 2] = "AUTHOR";
 })(Role || (Role = {}));
-var person = {
+exports.person = {
     name: 'Maximilian',
     age: 30,
     hobbies: ['sports', 'music'],
@@ -34,4 +37,4 @@ function printPerson(person1) {
     console.log("Person name: " + person1.name + ' With ' + person1.age + ' years, is a ' + person1.role);
     printHobbies(person1.hobbies);
 }
-printPerson(person);
+printPerson(exports.person);
