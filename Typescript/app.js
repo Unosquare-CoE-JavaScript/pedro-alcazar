@@ -4,7 +4,7 @@ var Person = /** @class */ (function () {
         this.name = n;
     }
     Person.prototype.greet = function (pharse) {
-        console.log('Pharse is :' + pharse + ' of: ' + this.name + 'with: ' + this.age + ' years');
+        console.log('Pharse is :' + pharse + ' of: ' + this.name + ' with: ' + this.age + ' years');
     };
     ;
     return Person;
