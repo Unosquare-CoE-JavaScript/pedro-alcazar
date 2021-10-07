@@ -1,14 +1,40 @@
-var Person = /** @class */ (function () {
-    function Person(n) {
-        this.age = 30;
-        this.name = n;
+var CourseGoal = /** @class */ (function () {
+    function CourseGoal() {
+        this.title = '';
+        this.description = '';
+        this.date = new Date();
     }
-    Person.prototype.greet = function (pharse) {
-        console.log('Pharse is :' + pharse + ' of: ' + this.name + ' with: ' + this.age + ' years');
-    };
-    ;
-    return Person;
+    return CourseGoal;
 }());
-var user1 = new Person('Max');
-console.log(user1);
-user1.greet("Call Geet");
+function createCurseGoal(title, description, date) {
+    var courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.date = date;
+    console.log(courseGoal);
+}
+createCurseGoal("Title1", "Descripcion del test", new Date());
+var DataStorage = /** @class */ (function () {
+    function DataStorage() {
+        this.data = [];
+    }
+    DataStorage.prototype.addItem = function (item) {
+        this.data.push(item);
+    };
+    DataStorage.prototype.removeItem = function (item) {
+        if (this.data.indexOf(item) === -1) {
+            return;
+        }
+        this.data.splice(this.data.indexOf(item), 1);
+    };
+    return DataStorage;
+}());
+var objDataStorage = new DataStorage();
+console.log(objDataStorage);
+objDataStorage.addItem('Item1');
+console.log(objDataStorage);
+objDataStorage.addItem('Item2');
+objDataStorage.addItem('Item3');
+console.log(objDataStorage);
+objDataStorage.removeItem('Item3');
+console.log(objDataStorage);
