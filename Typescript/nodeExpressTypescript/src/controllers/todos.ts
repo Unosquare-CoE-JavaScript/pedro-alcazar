@@ -1,4 +1,3 @@
-import { Request, Response, NextFunction } from 'express'
 import { RequestHandler } from 'express-serve-static-core'
 import { Todo } from '../models/todo';
 
@@ -35,7 +34,7 @@ export const deleteTodo : RequestHandler = ( req, res, next ) =>{
     const todoIndex  = TODOS.findIndex(todo => todo.id == todoId)
 
     if (todoIndex< 0 ) {
-        throw Error ('Could not found');
+        res.status(500).json({message: "not found"})
     }
 
     TODOS.splice(todoIndex, 1)

@@ -27,7 +27,7 @@ const deleteTodo = (req, res, next) => {
     const updatedText = req.body.text;
     const todoIndex = TODOS.findIndex(todo => todo.id == todoId);
     if (todoIndex < 0) {
-        throw Error('Could not found');
+        res.status(500).json({ message: "not found" });
     }
     TODOS.splice(todoIndex, 1);
     res.json({ message: 'todo deleted' });
