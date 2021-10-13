@@ -1,9 +1,14 @@
-
+/*  
+ * Enum status of projects
+ */
 export enum ProjectStatus{
     Active,
     Finished
 }
 
+/* 
+ * Main Class, 
+ */
 export class Project{
     constructor(
         public id: string, 

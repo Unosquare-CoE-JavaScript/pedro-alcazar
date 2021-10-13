@@ -1,3 +1,7 @@
+/* 
+ * This code show how create and use union of types
+ *  Creating a class with artibutes as a object
+ */
 class CourseGoal {
     title: string = '';
     description: string = '';
@@ -5,6 +9,7 @@ class CourseGoal {
 }
 
 function createCurseGoal(title: string, description: string, date: Date){
+    //Crating a variable typeof CourseGoal
     let courseGoal : Partial<CourseGoal> = {};
 
     courseGoal.title = title;
@@ -16,7 +21,12 @@ function createCurseGoal(title: string, description: string, date: Date){
 
 createCurseGoal("Title1", "Descripcion del test", new Date())
 
+/* 
+ * This code create a object to storage data
+ * Using methods to control the variable privated
+ */
 class DataStorage{
+    // Creating a data with differents posibles types
     private data: (string | number | boolean) [] = [];
 
     addItem(item: string | number | boolean){

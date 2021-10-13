@@ -1,3 +1,4 @@
+
 function add (n1: number, n2: number, showresult: boolean, Pharse: string = "Result:") {
     let result = n1 + n2;
     if (showresult){
@@ -13,18 +14,23 @@ const resultPhrase =  "The result is: "
 
 add(number1, number2, printResults, resultPhrase)
 
+//enum type of roles
 enum Role  {
     ADMIN, READ_ONLY, AUTHOR
 }
 
+/* 
+ * typeof Person
+ */
 type Person = {
     name: string,
     age: number,
     hobbies: string[],
     role: Role
 }
-
-
+/*
+ * Creating an object typeof Person 
+ */
 export const person : Person= {
     name: 'Maximilian',
     age: 30,
@@ -32,6 +38,8 @@ export const person : Person= {
     role: Role.AUTHOR
 }
 
+
+// Private functions
 function printHobbies (hobbies: string[]){
     let strHobies = "Hobbies:"
     hobbies.forEach(element => {

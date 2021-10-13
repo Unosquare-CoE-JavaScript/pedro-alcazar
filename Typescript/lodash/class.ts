@@ -1,3 +1,7 @@
+/* 
+ *  Department Class with methods requested from interfaces as contract
+ *  This code show how create classes 
+ */
 class Department {
     public name: string;
     public employees: string[] = [];
@@ -27,7 +31,9 @@ class Department {
         }
     }
 }
-
+/* 
+ * ITDepartment inheritance of Department
+ */
 class ITDepartment extends Department{
     admins : string[];
     constructor(id: string , admins: string[]){

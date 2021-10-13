@@ -1,4 +1,6 @@
-
+/* 
+ * Exporting as decorator
+ */
 export function autobind(_:any, _2: string, description: PropertyDescriptor){
     const originalMethod = description.value;
     const adjDescriptor: PropertyDescriptor = {

@@ -1,3 +1,6 @@
+/* 
+ *   This code show how implement a class with interfaces.
+ */
 interface Named {
     readonly name: string
 }
@@ -5,7 +8,9 @@ interface Named {
 interface Greetable extends Named {
     greet (pharse: string): void
 }
-
+/* 
+ *  Main class as a model
+ */
 class Person implements Greetable{
     name: string;
     age: number = 30;
