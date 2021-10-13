@@ -1,4 +1,6 @@
-
+/*
+ * Crating a component of two types
+ */
 export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
     templateElement: HTMLTemplateElement;
     hostelement : T;
