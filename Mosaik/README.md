@@ -1,4 +1,4 @@
-## Trainning Project Mosaik
+## Training Project Mosaik
 
 This project will be a training project, using all platforms and tools requested by Mosaik.
 
