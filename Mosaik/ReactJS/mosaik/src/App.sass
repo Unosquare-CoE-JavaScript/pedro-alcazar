@@ -1,0 +1,428 @@
+$color-font: #252525
+$color-font-secondary: #e7e7e7
+$color-font-pharagrap: #5C727D
+$background-color: #fff
+$background-section: #5C727D
+$bg-section: #0B2C3D
+$bg-section-secondary: #F2F6F7
+$orange-secondary: #cb3421
+$orange: #FF5A3C
+$background-footer: #171b2a
+
+body
+  background-color: $background-color
+  color: $color-font
+
+ul
+  list-style-type: none
+
+.p-top-element a
+  text-decoration: none
+
+.content
+    padding-left: 5%
+    padding-right: 5%
+
+.App 
+  text-align: center
+
+.App-logo 
+  height: 40vmin
+  pointer-events: none
+
+@media (prefers-reduced-motion: no-preference)
+  .App-logo 
+    animation: App-logo-spin infinite 20s linear
+
+.App-header
+  background-color: $background-color
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  font-size: calc(10px + 2vmin)
+  color: white
+
+.App-link 
+  color: #61dafb
+
+@keyframes .App-logo-spin
+  from 
+    transform: rotate(0deg)
+  to 
+    transform: rotate(360deg)
+
+.NavBar
+  background-color: $background-color
+  display: flex
+  justify-content: space-between
+  padding-top: 2%
+  padding-bottom: 2%
+
+  .NavBar-Logo
+    width: 250px
+    height: 56px
+    z-index: 1
+    position: sticky
+
+  .NavBar-Left
+    display: flex
+    margin-top: auto
+    margin-bottom: auto
+    width: 33%
+
+  .NavBar-Center
+    width: 33%
+    margin-top: auto
+    margin-bottom: auto
+    ul
+      display: flex
+      list-style-type: none
+      margin: 0
+      padding: 0
+      li
+        padding-right: 2%
+        a
+          color: $color-font
+          text-decoration: none
+        a:hover
+          color: $orange
+          border-bottom: 2px $orange solid
+  
+  .NavBar-right
+    width: 33%
+    display: flex
+    margin-top: auto
+    margin-bottom: auto
+    justify-content: center
+  
+  .NavBar-icon
+    margin-right: 3%
+    margin-left: 3%
+    padding: 3%
+    box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.1)
+    cursor: pointer
+    
+  .NavBar-icon:hover
+    background-color: $orange
+    color: $color-font-secondary
+
+.Navbar-active
+  color: $orange
+  border-bottom: 2px $orange solid
+
+
+.row
+  display: flex
+
+div[class^="col"]
+  display: flex
+  flex-direction: column
+  padding: 10px
+.col-2
+  width: 16.66%
+
+.col-6
+  width: 50%
+
+.col-10
+  width: 86.2%
+
+.border
+  border: 1px gray solid
+
+.border-left
+  border-left: 2px gray solid
+
+.border-left-orange
+  border-left: 2px $orange solid
+
+.h-100
+  height: 100%
+
+.w-100
+  width: 100%
+
+.topbar
+  background-color: $bg-section
+  color: $color-font-secondary
+
+.icon-top
+  padding-left: 5px
+  padding-right: 5px
+  cursor: pointer
+
+.btn-top
+  background-color: $orange
+  color: $color-font-secondary  
+  padding-left: 10%
+  padding-right: 10%
+  padding-top: 6%
+  cursor: pointer
+
+.d-flex
+  display: flex
+
+.justify-content-between
+  justify-content: space-between
+
+.justify-content-center
+  justify-content: center
+
+.justify-content-end
+  justify-content: end
+
+.px-2
+  padding-left: 20%
+  padding-right: 20%
+
+.py-1
+  padding-top: 5%
+  padding-bottom: 5%
+
+.py-2
+  padding-top: 20%
+  padding-bottom: 20%
+
+.mx-1
+  margin-right: 1%
+  margin-left: 1%
+  
+.mx-2
+  margin-left: 20%
+  margin-right: 20%
+
+
+.ml-1
+  margin-left: 1%
+
+.top-element
+  margin-right: 20px
+  padding-top: 3%
+  padding-bottom: 3%
+
+.p-top-element
+  display: flex
+  padding-top: 7%
+  padding-bottom: 7%
+
+.text-white
+  color: $color-font-secondary
+
+.text-orange  
+  color: $orange
+
+.text-gray
+  color: gray
+
+.text-pharagrap
+  color: $color-font-pharagrap
+
+.icon-top:hover
+  color: $orange-secondary
+
+.btn-top:hover
+  background-color: $orange-secondary
+
+.slider
+  background-color: $bg-section-secondary
+
+.store
+  background-color: $bg-section-secondary
+
+.slider-description
+  padding-left: 2%
+
+.slider-btns-section
+  padding-top: 3%
+  padding-bottom: 3%
+
+.slider-btn
+  height: 60px
+  max-width: 250px
+  background-color: $orange
+  border: none
+  color: $color-font-secondary
+  cursor: pointer
+
+.slider-btn:hover
+  background-color: $orange-secondary
+
+.slider-img-section
+  padding-top: 3%
+
+.slider-img
+  width: 80%
+
+.vineta-orange
+  padding-top: 10px
+  padding-left: 1%
+  border-left: 2px $orange solid
+  margin-top: 1%
+  color: $color-font-pharagrap
+  
+.today-title
+  font-size: 52px
+
+.today-items
+  margin-right: 2%
+  margin-top: 3%
+  padding-left: 1%
+  color: $color-font-pharagrap
+  padding-top: 1%
+  padding-bottom: 1%
+
+.today-items-img
+  padding-top: 10%
+  padding-right: 10%
+  img
+    height: 100px
+
+.today-img
+  max-width: 500px
+  margin-left: auto
+  margin-right: auto
+
+
+.today-btn-background
+  border-radius: 50px
+  max-width: 11ch
+  background-color: #ff593c3a
+
+.today-btn
+  padding-left: 2ch  
+  padding-right: 2ch
+  padding-top: 5px
+  padding-bottom: 5px
+  color: $orange
+  border: 1px $orange solid
+  border-radius: 50px
+
+.footer
+  background-color: $background-footer
+  color: $color-font-secondary
+
+.footer-logo
+  max-width: 30px
+  padding-right: 5px
+
+.footer-header
+  width: 80%
+  margin-right: auto
+  margin-left: auto
+  background-color: $orange
+  color: $color-font-secondary
+  position: relative
+  top: -50px
+
+.footer-header-btn
+    margin-top: 20%
+    margin-bottom: 20%
+    margin-left: 50%
+    border: none
+    background-color: $background-color
+    height: 50px
+    width: 200px
+
+.footer-col
+  width: 25%
+  padding-left: .5%
+  padding-right: .5%
+  font-size: 14px
+  font-weight: 300
+  a
+    text-decoration: none
+    color: $color-font-secondary
+    &:hover
+      &::before
+        content: "// "
+        color: $orange
+
+
+
+.input-group
+  display: flex
+
+.input-group-box
+  height: 40px
+  width: 80%
+  border: none
+
+.input-group-btn
+  border: none
+  width: 20%
+  background-color: $orange
+  color: $color-font-secondary
+
+.card
+  color: $color-font-pharagrap
+  font-size: 14px
+
+.card-body
+  padding: 1%
+
+.card-footer
+  padding: 1%
+
+.shadow 
+  box-shadow: 2px 2px 2px 1px #f3f4f6
+
+.users-title
+  padding-left: .5%
+  margin-left: 6%
+
+.user-list
+  max-width: 350px
+  border: .5px $color-font-pharagrap solid
+  box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.1)
+  padding: 1%
+
+.user-avatar
+  max-width: 80px
+  max-height: 80px
+  margin-top: auto
+  margin-bottom: auto
+  padding-right: 5%
+
+.pl-0
+  padding-right: 0
+
+.pl-1
+  padding-right: 1%
+
+.store-footer-card
+  border-top: 1px #e5eaee solid
+  padding-top: 10px
+  padding-bottom: 18px
+  margin-top: 5px
+
+.card-store-btn
+  margin-right: 10px
+  padding: 3%
+  border: none
+  background-color: #f2f6f7
+  color: $color-font-pharagrap
+  cursor: pointer
+  &:hover
+    background-color: $orange
+    color: white
+
+.card-store-img
+  width: 100%
+  height: 250px
+
+.card-store
+  width: 25%
+  z-index: 10
+  transition: transform .5s ease
+  &:hover
+    transform: scale(1.1)
+  .card
+    background-color: white
+
+.card-store-link
+  text-decoration: none
+  color: $color-font-pharagrap
+  &:hover
+    color: $orange
