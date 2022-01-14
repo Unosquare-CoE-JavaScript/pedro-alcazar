@@ -17,7 +17,7 @@ import './App.sass';
 const AppRoutes = () =>{
     let routes = useRoutes([
       { path : "/", element : <Home/>},
-      { path : "/users", element : <Users/>},
+      { path : "/settings", element : <Users/>},
       { path : "/store", element : <Store/>},
       { path : "/store/product-details/:id", element : <ProductDetail/>}
     ]);

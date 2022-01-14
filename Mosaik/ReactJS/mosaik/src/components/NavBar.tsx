@@ -19,7 +19,7 @@ const NavBar = () =>{
                 <NavLink className={(navData: any ): string => navData.isActive ? "Navbar-active": "" } to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink className={(navData: any ): string => navData.isActive ? "Navbar-active": "" } to="/users">Users</NavLink>
+                <NavLink className={(navData: any ): string => navData.isActive ? "Navbar-active": "" } to="/settings">Settings</NavLink>
               </li>
               <li>
                 <NavLink className={(navData: any ): string => navData.isActive ? "Navbar-active": "" } to="/store">Store</NavLink>

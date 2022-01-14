@@ -8,7 +8,7 @@ $bg-section-secondary: #F2F6F7
 $orange-secondary: #cb3421
 $orange: #FF5A3C
 $background-footer: #171b2a
-
+$yellow: #f5c115
 body
   background-color: $background-color
   color: $color-font
@@ -123,14 +123,23 @@ div[class^="col"]
 .col-2
   width: 16.66%
 
+.col-4
+  width: 33.33%
+
 .col-6
   width: 50%
+
+.col-8
+  width: 66.66%
 
 .col-10
   width: 86.2%
 
 .border
-  border: 1px gray solid
+  border: 2px $color-font-secondary solid
+
+.border-bottom
+  border-bottom: 1px $color-font-secondary solid
 
 .border-left
   border-left: 2px gray solid
@@ -177,6 +186,10 @@ div[class^="col"]
   padding-left: 20%
   padding-right: 20%
 
+.px-1
+  padding-left: 5%
+  padding-right: 5%
+
 .py-1
   padding-top: 5%
   padding-bottom: 5%
@@ -193,9 +206,16 @@ div[class^="col"]
   margin-left: 20%
   margin-right: 20%
 
+.my-auto
+  margin-top: auto
+  margin-bottom: auto
+
 
 .ml-1
   margin-left: 1%
+
+.mr-1
+  margin-right: 1%
 
 .top-element
   margin-right: 20px
@@ -219,6 +239,9 @@ div[class^="col"]
 .text-pharagrap
   color: $color-font-pharagrap
 
+.text-warning
+  color: $yellow
+
 .icon-top:hover
   color: $orange-secondary
 
@@ -229,6 +252,9 @@ div[class^="col"]
   background-color: $bg-section-secondary
 
 .store
+  background-color: $bg-section-secondary
+
+.bg-section-secondary
   background-color: $bg-section-secondary
 
 .slider-description
@@ -373,23 +399,29 @@ div[class^="col"]
   margin-left: 6%
 
 .user-list
-  max-width: 350px
-  border: .5px $color-font-pharagrap solid
+  border: .5px $color-font-secondary solid
   box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.1)
   padding: 1%
+  ul
+    li
+      padding: 1%
 
 .user-avatar
   max-width: 80px
   max-height: 80px
   margin-top: auto
   margin-bottom: auto
-  padding-right: 5%
+  border-radius: 50%
+  box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.1)
 
 .pl-0
-  padding-right: 0
+  padding-left: 0
 
 .pl-1
-  padding-right: 1%
+  padding-left: 1%
+
+.pl-2
+  padding-left: 10%
 
 .store-footer-card
   border-top: 1px #e5eaee solid
@@ -426,3 +458,69 @@ div[class^="col"]
   color: $color-font-pharagrap
   &:hover
     color: $orange
+
+.btn
+  border: none
+  height: 30px
+  padding: 1%
+  color: $color-font-secondary
+
+.btn-featured
+  background-color: $orange
+
+.btn-mode
+  background-color: #f5c115
+
+.subtitle-product
+  border-left: 2px $orange solid
+  padding-left: 1%
+
+.badge-product
+  border: none
+  background-color: #ff593c3a
+  padding: 10px
+
+.badge-product-image
+  color: $orange
+  
+.map
+  width: 100%
+  height: 300px
+  background-color: #ff593c3a
+
+.product-image-seller
+  max-width: 200px
+  border: 1px $bg-section-secondary solid
+  border-radius: 50%
+  box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.1)
+
+.social-media-icon
+  cursor: pointer
+  margin-right: 10%
+  &:hover
+    color: $orange
+
+.gallery
+  width: 100%
+  height: 300pxs
+  border: 1px rgba(100, 100, 100, 0.1) solid
+
+.gallery-item
+  max-width: 20%
+  padding: 5%
+  cursor: pointer
+  transition: .3s
+  &:hover
+    transform: scale(1.1)
+
+.VerticalBar
+  background-color: $bg-section-secondary
+  ul
+    li
+      padding: 3%
+      cursor: pointer
+      &:hover
+        background-color: $orange
+        color: $color-font-secondary
+        
+      
