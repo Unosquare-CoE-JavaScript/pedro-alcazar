@@ -2,15 +2,14 @@ import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faExpandAlt, faHeart, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { MockupGet } from "../services/api";
+import { Get } from "../services/api";
 import { Key, ReactChild, ReactFragment, ReactPortal, useEffect, useState } from "react";
 
 const Store = () => {
-    console.log(process.env)
     const [houses, setHouses] = useState<any | null>(null)
     useEffect(() =>{
         const getData = async() =>{
-            setHouses(await MockupGet('/houses'))
+            setHouses(await Get('/houses/'))
         }
         getData();
     },[]);

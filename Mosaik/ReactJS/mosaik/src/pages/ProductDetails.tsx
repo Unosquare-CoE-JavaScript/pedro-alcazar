@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
-import { MockupGet } from "../services/api";
+import { Get } from "../services/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarWeek, faMapMarkerAlt, faComments, faBed} from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faTwitter, faYoutube,  } from "@fortawesome/free-brands-svg-icons";
@@ -16,7 +16,7 @@ const ProductDetails = () =>{
     useEffect(() =>{
         console.log("Ingress on useEffect to getHouse")
         const getData = async() =>{
-            await setHouse(MockupGet('/house/', Number(params.id)))
+            setHouse(await Get('/houses/', Number(params.id)))
         }
         getData();
     }, [params]);
@@ -24,7 +24,7 @@ const ProductDetails = () =>{
     useEffect(() =>{
         console.log("Ingress on useEffect to getSeller")
         const getSeller = async() =>{
-            await setSeller(MockupGet('/users/', Number(house.seller)))
+            setSeller(await Get('/users/', Number(house.seller)))
         };
         if (house)
             getSeller();

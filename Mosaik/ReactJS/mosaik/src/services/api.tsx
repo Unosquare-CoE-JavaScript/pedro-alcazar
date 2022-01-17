@@ -1,23 +1,20 @@
-import { IUser } from '../models/user';
 import { arrayHouses, arrayUser, galleryHouses } from './mockup';
 
-const url = "http://localhost:8080/api";
+const url = "http://"+process.env.REACT_APP_BACKEND_HOST+":"+process.env.REACT_APP_BACKEND_PORT+"/api";
 
-export const Get = async (endpoint: string) =>{
-    return (
-        fetch(url + endpoint)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                return data;
-            })
-            .catch(error => console.log(error))
-    );
-}
-
-export const MockupGet : IUser[] | any = (endpoint: string, id: number = 0)  =>{
+export const Get: any = (endpoint: string, id: number = 0) =>{
+    if (process.env.REACT_APP_PRODUCTION === "true")
+        return (
+            fetch(url + endpoint + (id !== 0 ? id: "")) 
+                .then(response => response.json())
+                .then(data => {
+                    return data;
+                })
+                .catch(error => console.log(error))
+        );
+    
     switch (endpoint){
-        case '/houses':
+        case '/houses/':
             return (arrayHouses);
         
         case '/house/':
@@ -31,5 +28,5 @@ export const MockupGet : IUser[] | any = (endpoint: string, id: number = 0)  =>{
         
         case '/users':
             return arrayUser;
-    }
+    }  
 }

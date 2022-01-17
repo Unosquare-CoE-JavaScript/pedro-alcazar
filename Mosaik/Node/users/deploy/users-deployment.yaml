@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-users-deployment
+  name: users
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: mosaik
+      app: mosaik-users
   template:
     metadata:
       labels:
-        app: mosaik
+        app: mosaik-users
     spec:
       containers:
       - name: users
-        image: nodejs-users-mosaik:dev
+        image: mosaik/backend_users:dev
         ports:
         - containerPort: 8080

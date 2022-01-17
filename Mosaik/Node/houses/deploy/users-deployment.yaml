@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-mosaik-deployment
+  name: houses
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: mosaik
+      app: mosaik-houses
   template:
     metadata:
       labels:
-        app: mosaik
+        app: mosaik-houses
     spec:
       containers:
-      - name: react-mosaik
-        image: react-mosaik:dev
+      - name: houses
+        image: mosaik/backend_houses:dev
         ports:
-        - containerPort: 80
+        - containerPort: 8080

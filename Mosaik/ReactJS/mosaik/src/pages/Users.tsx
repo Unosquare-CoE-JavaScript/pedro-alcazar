@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Get, MockupGet } from "../services/api";
+import { Get } from "../services/api";
 import { IUser } from "../models/user";
 import { IConnection } from "../models/conection";
 import Footer from "../components/Footer";
@@ -15,7 +15,7 @@ const Users = () => {
     useEffect(() =>{
         const CheckConnection = async() =>{
             console.log("Checking connection...")
-            // setConnection(await Get("/"))
+            setConnection(await Get("/"))
         }
         CheckConnection();
     },[])
@@ -23,14 +23,14 @@ const Users = () => {
     useEffect(() =>{
         const getData = async () => {
             console.log("Getting Users Data")
-            // setUsers(await Get('/users'));
-            setUsers(MockupGet('/users'))
+            setUsers(await Get('/users'))
         } 
         getData();
     },[]);
 
 
     if (users){
+        console.log(users);
         return (
             <>
                 <div className="content py-1">

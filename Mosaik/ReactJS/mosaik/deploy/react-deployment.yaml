@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mosaik-react
+  template:
+    metadata:
+      labels:
+        app: mosaik-react
+    spec:
+      containers:
+      - name: mosaik-react
+        image: mosaik/frontend_react:dev
+        ports:
+        - containerPort: 80

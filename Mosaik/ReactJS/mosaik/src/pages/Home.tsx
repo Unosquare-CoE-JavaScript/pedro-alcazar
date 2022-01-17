@@ -3,7 +3,6 @@ import TodaySales from '../components/TodaySales';
 import Footer from '../components/Footer';
 
 const Home = () => {
-
     return (
         <>
             <div className="slider content">

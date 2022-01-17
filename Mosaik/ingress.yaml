@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mosaik-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: demo.localdev.me
+    http:
+      paths:
+      - pathType: Exact
+        path: "/"
+        backend:
+          service:
+            name: react
+            port:
+              number: 80
+      - pathType: Prefix
+        path: "/api/users/"
+        backend:
+          service:
+            name: users
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: "/api/houses/"
+        backend:
+          service:
+            name: houses
+            port:
+              number: 8080

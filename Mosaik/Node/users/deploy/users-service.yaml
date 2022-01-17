@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: users
+  labels:
+    app: mosaik-users
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+  selector:
+    app: mosaik-users
